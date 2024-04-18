@@ -123,11 +123,14 @@ void print_board(const piece board[]) {
     // Display the Tic-Tac-Toe board
     std::cout << "\n    1   2   3\n";
     std::cout << "  +-----------\n";
-    std::cout << "A | " << getColorChar(board[a1]) << " | " << getColorChar(board[a2]) << " | " << getColorChar(board[a3]) << "\n";
+    std::cout << "A | " << getColorChar(board[a1]) << " | " 
+        << getColorChar(board[a2]) << " | " << getColorChar(board[a3]) << "\n";
     std::cout << "  | ---+---+---\n";
-    std::cout << "B | " << getColorChar(board[b1]) << " | " << getColorChar(board[b2]) << " | " << getColorChar(board[b3]) << "\n";
+    std::cout << "B | " << getColorChar(board[b1]) << " | " 
+        << getColorChar(board[b2]) << " | " << getColorChar(board[b3]) << "\n";
     std::cout << "  | ---+---+---\n";
-    std::cout << "C | " << getColorChar(board[c1]) << " | " << getColorChar(board[c2]) << " | " << getColorChar(board[c3]) << "\n";
+    std::cout << "C | " << getColorChar(board[c1]) << " | "
+        << getColorChar(board[c2]) << " | " << getColorChar(board[c3]) << "\n";
     std::cout << "  +-----------\n\n";
 }
 
@@ -162,7 +165,7 @@ int prompt_input(piece board[], const bool x_turn) {
     while (!good_response) {
 
         // display any error message
-            std::cout << "\033[2J\033[1;1H";  // Clear screen and move cursor to top-left corner     // clear terminal
+        std::cout << "\033[2J\033[1;1H";  // Clear screen and move cursor to top-left corner    
         if (bad_response) {
             std::cout << "ERROR! Bad response given." << std::endl;
             bad_response = false;  // reset flag
